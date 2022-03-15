@@ -277,7 +277,7 @@
            var obj = {"name":name, "mobile":phone, "message":message, "email":email};
            console.log(obj);
           $.ajax({
-        url: "http://localhost:8934/insert",
+        url: "https://virtualdekho.herokuapp.com/insert",
         type: "get",       
     data: jQuery.param({"name":name, "mobile":phone, "message":message, "email":email}) ,
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
