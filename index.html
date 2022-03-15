@@ -211,7 +211,7 @@
             </form>
 		<div class="row" >
 			<div class="col">
-				<div id="d2" class="alert alert-success" style="display:none">successfully submitted your response</div>
+				<div id="d2" class="alert alert-success" >successfully submitted your response</div>
 			</div>
 		</div>
           </div>
@@ -266,7 +266,10 @@
     <!-- contact us -->
 
     <script>
-
+ $(document).ready(function () {
+        $('#d2').hide();
+alert("hello");
+    });
     function submitData(e){
 
   e.preventDefault();
@@ -283,9 +286,7 @@
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: function (response) {
           console.log(response);
-	$('#d2').show();
-	$('#d2').fadeIn('fast');
-	$('#d2').fadeOut('slow');
+ $('#d2').show();
         },
         error: function(jqXHR, textStatus, errorThrown) {
            console.log(textStatus, errorThrown);
